@@ -1,0 +1,35 @@
+-- CREATE DATABASE customers;
+-- USE customers;
+-- CREATE TABLE customer(firstname varchar(10),lastname varchar(10),price int);
+-- INSERT INTO customer VALUES("gabu","soujanya",10);
+-- INSERT INTO customer VALUES("gabu","suguna",20);
+-- INSERT INTO customer VALUES("G","bhagya",30);
+-- INSERT INTO customer VALUES("G","umapathi",40);
+-- SHOW TABLES;
+-- DESC products;
+USE sql_store;
+-- SHOW TABLES;
+-- DESC orders;
+-- SELECT * FROM orders WHERE order_date>'2019-01-01';
+-- SELECT firstname,lastname,price,price*1.1 AS 'new price' FROM customer;
+-- SHOW TABLES;
+-- DESC order_items;
+-- DESC products;
+-- SELECT * FROM products WHERE quantity_in_stock IN(49,38,72);
+-- SELECT * FROM order_items WHERE order_id=6 AND unit_price * quantity>30;
+ -- DESC customers;
+-- SELECT * FROM customers WHERE birth_date BETWEEN '1990-01-01' AND '2000-01-01';
+-- SELECT * FROM customers WHERE address LIKE "%trail%" 
+	-- OR address LIKE "%avenu%"
+		-- AND phone LIKE "%9";
+-- DESC customers;
+-- SELECT * FROM customers WHERE first_name IN ('elka','ambur');
+-- SELECT * FROM customers WHERE last_name LIKE 'ey$' or 'on$';
+-- SELECT * FROM customers WHERE last_name regexp "^my|se" 
+-- SELECT * FROM customers WHERE last_name regexp "br|bu";
+-- SELECT * FROM customers WHERE last_name regexp 'ey$|on$';
+-- DESC orders;
+-- SELECT * FROM orders WHERE shipped_date IS NULL;
+-- SELECT * FROM order_items WHERE order_id=2 ORDER BY unit_price*quantity DESC;
+-- DESC customers;
+SELECT * FROM customers ORDER BY points DESC LIMIT 3;
