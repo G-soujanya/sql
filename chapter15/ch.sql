@@ -1,0 +1,13 @@
+CREATE USER john@localhost IDENTIFIED BY '1234';
+CREATE USER john@'%.codewithmosh.com' IDENTIFIED BY '1234';
+SELECT * FROM mysql.user;
+DROP USER john@'%.codewithmosh.com';
+SET PASSWORD FOR john@localhost='1902';
+CREATE USER moon_app IDENTIFIED BY '1234';
+GRANT SELECT,UPDATE,INSERT,DELETE,EXECUTE ON sql_store.* TO moon_app;
+GRANT ALL ON *.* TO moon_app;
+SHOW GRANTS FOR moon_app;
+SHOW GRANTS;
+GRANT CREATE VIEW ON sql_store.* TO moon_app;
+REVOKE CREATE VIEW ON sql_store.* FROM moon_app;
+DROP USER moon_app;
